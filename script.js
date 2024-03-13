@@ -70,3 +70,29 @@ console.log(`modified array1 is:  ${array1Modified}`);
 const array2Modified = removeEvenNumber(array2);
 console.log(`modified array2 is:  ${array2Modified}`);
 
+const shoppingBasket = [];
+const stockProducts = [
+    {
+        name: "Hat",
+        price: 22.99,
+        stock: 12
+    },
+    {
+        name: "Tricou",
+        price: 30.99,
+        stock: 40
+    }
+];
+
+function moveFromStockToBasket(productName) {
+    for (const product of stockProducts) {
+        if (product.name === productName) {
+            shoppingBasket.push({name: product.name, quantity:1});
+            product.stock = -1;
+        }
+    }
+}
+
+moveFromStockToBasket("Hat");
+console.log(`curent stock: `, ${stockProducts});
+console.log(`shopping basket: , ${shoppingBasket}`);
