@@ -93,6 +93,6 @@ function moveFromStockToBasket(productName) {
     }
 }
 
-moveFromStockToBasket("Hat");
-console.log(`curent stock: `, ${stockProducts});
-console.log(`shopping basket: , ${shoppingBasket}`);
+//moveFromStockToBasket("Hat");
+//console.log(`curent stock: `, ${stockProducts});
+//console.log(`shopping basket: , ${shoppingBasket}`);
