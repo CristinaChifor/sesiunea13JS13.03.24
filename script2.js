@@ -92,7 +92,7 @@ console.log(`Modified aray2 is: ${aray2Modified}`);
  console.log(`Shopping basket: `, shoppingBasket2);
 
  moveFromStockToBasket2(`Hat`);
- 
+
  console.log(`Current stock: `, stockProducts2);
  console.log(`Shopping basket: `, shoppingBasket2);
 
@@ -101,3 +101,33 @@ console.log(`Modified aray2 is: ${aray2Modified}`);
 // Functii Anonime
 //Sunt funcții ce le definim fără a fi nevoie sa le denumim dar le putem salva în variabile. 
 //Folosirea lor va fi posibila prin folosirea variabilei în care este salvată funcția. Aceste funcții, optional, pot avea parametrii si valori de return.
+
+const printHello = function () {
+    console.log(`hello`);
+};
+
+printHello();
+
+function mapArray(arrayToMap, mappingFunction) {
+const newArray2 = [];
+for(const element of arrayToMap) {
+    let mappingFunctionResult = mappingFunction(element);
+    newArray2.push(mappingFunctionResult);
+}
+
+    return newArray2;
+}
+
+const arrayToMap = [1, 2, 3];
+const doubledArray = mapArray(arrayToMap, function(el) {
+    return el *2;
+}
+)
+
+console.log(`arrayToMap: ${arrayToMap}`);
+console.log(`doubledArray: ${doubledArray}`);
+
+const doubled2 = arrayToMap.map(function(el) {
+    return el *2;
+});
+console.log(`doubled2: ${doubled2}`);
