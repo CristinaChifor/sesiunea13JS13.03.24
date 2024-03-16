@@ -64,3 +64,40 @@ console.log(`Modified aray1 is: ${aray1Modified}`);
 
 const aray2Modified = removeEvenNumbers(aray2);
 console.log(`Modified aray2 is: ${aray2Modified}`);
+
+ const shoppingBasket2 = [];
+ const stockProducts2 = [
+    {
+        name: "Hat",
+        price: 22.99,
+        stock: 12
+    },
+    {
+        name: "T-shirt",
+        price: 30.99,
+        stock: 40
+    }
+ ];
+
+ function moveFromStockToBasket2(productName) {
+    for (const product of stockProducts2) {
+        if(product.name === productName) {
+            shoppingBasket2.push({name: product.name, quantity: 1});
+            product.stock -= 1;
+        }
+    }
+ }
+
+ console.log(`Current stock: `, stockProducts2);
+ console.log(`Shopping basket: `, shoppingBasket2);
+
+ moveFromStockToBasket2(`Hat`);
+ 
+ console.log(`Current stock: `, stockProducts2);
+ console.log(`Shopping basket: `, shoppingBasket2);
+
+
+
+// Functii Anonime
+//Sunt funcții ce le definim fără a fi nevoie sa le denumim dar le putem salva în variabile. 
+//Folosirea lor va fi posibila prin folosirea variabilei în care este salvată funcția. Aceste funcții, optional, pot avea parametrii si valori de return.
