@@ -43,3 +43,24 @@ arrayHasElement3(aray1, valueToCheck3);
 arrayHasElement3(aray2, valueToCheck3);
 arrayHasElement3(aray2, valueToCheck4);
 arrayHasElement3(['ala','bala','portocala'], 'ala');
+
+// Funcții cu parametri si return
+//Sunt compuse din cuvantul cheie function urmat de numele funcției urmat de paranteze rotunde intre care definim parametrii funcției (opțional) (param1, param2) urmate de paranteze acolade { } în interiorul cărora scriem liniile de cod ce dorim sa fie executate în momentul apelarii funcției printre care trebuie sa existe și o linie de cod ce returnează o valoare folosind cuvantul cheie return urmat de valoare.
+
+function removeEvenNumbers(arrayToModify2) {
+    const newArray2 = [];
+
+    for (const num of arrayToModify2) {
+        //console.log(`num: `, num, "result: ", num % 2);
+        if(num % 2 > 0) {
+            newArray2.push(num);
+        }
+    }
+    return newArray2;
+}
+
+const aray1Modified = removeEvenNumbers(aray1);
+console.log(`Modified aray1 is: ${aray1Modified}`);
+
+const aray2Modified = removeEvenNumbers(aray2);
+console.log(`Modified aray2 is: ${aray2Modified}`);
