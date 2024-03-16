@@ -131,3 +131,35 @@ const doubled2 = arrayToMap.map(function(el) {
     return el *2;
 });
 console.log(`doubled2: ${doubled2}`);
+
+// Arrow functions (functii sageata) () =>
+// Arrow functions sunt adesea folosite pentru a simplifica codul și pentru a oferi o modalitate mai elegantă de a lucra cu funcții anonime.
+
+const sayHello = () => {
+    console.log(`Hello`);
+};
+
+sayHello();
+
+const sayHelloTo = (personName) => {
+    console.log(`Hello ${personName}`);
+};
+
+sayHelloTo(`Cristina`);
+
+const getGreeting= (greetedPerson) => {
+    return 'Greetings ${greatedPerson}!';
+};
+
+let greeting = getGreeting("John");
+console.log(greeting);
+
+greeting = getGreeting('Maria');
+console.log(greeting);
+
+const doubled3 = arrayToMap.map( (el) => {
+    return el *2;
+});
+console.log(`doubled3: ${doubled3}`);
+
+// const doubled3 = arryToMap (el => el * 2);
